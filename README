@@ -1,0 +1,15 @@
+# Overview
+
+I built a small Java command-line **Pomodoro timer** called **FocusTimer** to sharpen my understanding of core Java while shipping something I can actually use. It runs in the terminal and alternates between focus and break sessions for a set number of cycles. The app shows the current phase, cycle number, and time remaining, supports **pause/resume** (`p` + Enter) and **quit** (`q` + Enter), handles Ctrl-C cleanly, and writes a simple CSV row at the end of each run so I can track what I finished.
+
+My goal was to practice everyday Java: simple argument parsing, a clear class layout, a tiny state machine, time calculations with `java.time`, and a scheduled loop that avoids drift. I kept the code intentionally straightforward and readable so it’s easy to extend later.
+
+[Software Demo Video](https://youtu.be/YOUR_VIDEO_LINK_HERE)
+
+# Development Environment
+
+- **Tools:** VS Code, Windows 11 terminal (PowerShell/CMD), JDK 21  
+- **How to compile/run:**
+  ```bat
+  javac -d out src\*.java
+  java -cp out FocusTimer --work 25 --break 5 --cycles 4
